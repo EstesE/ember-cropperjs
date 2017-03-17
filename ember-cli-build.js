@@ -7,6 +7,27 @@ module.exports = function(defaults) {
     // Add options here
   });
 
+  app.import('bower_components/bootstrap/dist/js/bootstrap.js');
+  app.import('bower_components/cropperjs/dist/cropper.js');
+
+  app.import('bower_components/font-awesome/fonts/fontawesome-webfont.eot', { destDir: 'fonts' });
+  app.import('bower_components/font-awesome/fonts/fontawesome-webfont.svg', { destDir: 'fonts' });
+  app.import('bower_components/font-awesome/fonts/fontawesome-webfont.ttf', { destDir: 'fonts' });
+  app.import('bower_components/font-awesome/fonts/fontawesome-webfont.woff', { destDir: 'fonts' });
+  app.import('bower_components/font-awesome/fonts/fontawesome-webfont.woff2', { destDir: 'fonts' });
+  app.import('bower_components/font-awesome/fonts/FontAwesome.otf', { destDir: 'fonts' });
+
+  app.import('bower_components/aspen-theme/fonts/entypo.eot', { destDir: 'fonts' });
+  app.import('bower_components/aspen-theme/fonts/entypo.ttf', { destDir: 'fonts' });
+  app.import('bower_components/aspen-theme/fonts/entypo.woff', { destDir: 'fonts' });
+  app.import('bower_components/aspen-theme/fonts/entypo.woff2', { destDir: 'fonts' });
+
+  app.import('bower_components/Ionicons/fonts/ionicons.eot', { destDir: 'fonts' });
+  app.import('bower_components/Ionicons/fonts/ionicons.ttf', { destDir: 'fonts' });
+  app.import('bower_components/Ionicons/fonts/ionicons.woff', { destDir: 'fonts' });
+  app.import('bower_components/Ionicons/fonts/ionicons.woff2', { destDir: 'fonts' });
+
+
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //

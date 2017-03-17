@@ -1,0 +1,52 @@
+<style>
+	.container {
+		max-width: 640px;
+		margin: 20px auto;
+	}
+	
+	img {
+		max-width: 100%;
+	}
+	
+	.cropper-view-box,
+	.cropper-face {
+		border-radius: 50%;
+	}
+</style>
+{{#if this.isLoading}}
+<div id='loaderDiv'>
+    <div class='loader'>Loading</div>
+</div>
+{{/if}}
+<div class="container">
+	<h1>Crop a round image</h1>
+	<h3>Image</h3>
+	<div>
+		<img id="image" src="assets/images/image.jpg" alt="image">
+	</div>
+	<p>
+		{{#x-file-input 
+			name="file" 
+			multiple=false 
+			accept="image/jpg"
+			action=(action "handleFileSelect") 
+			alt="Choose a File" 
+		}}
+			<button type="button" class="btn btn-default">Select Image</button>
+		{{/x-file-input}}
+	</p>
+	<p>
+		<div class="btn-group" role="group" aria-label="...">
+			<button type="button" class="btn btn-default" id="button" {{action 'getData'}}>Crop</button>
+			<button type="button" class="btn btn-default">Upload</button>
+			Upload button does not work at the moment.
+		</div>
+	</p>
+</div>
+
+<div class="container text-center">
+<h3>Result</h3>
+{{#if this.roundedImage}}
+<img class="shadow-circle" src={{this.roundedImage.src}} />
+{{/if}}
+</div>
