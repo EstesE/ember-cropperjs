@@ -54,6 +54,12 @@ export default Ember.Component.extend({
 
     },
 
+    didDestroyElement() {
+        console.log(this.get('cropper'));
+        this.get('cropper').destroy();
+        console.log(this.get('cropper'));
+    },
+
     actions: {
         getData() {
             let component = this;

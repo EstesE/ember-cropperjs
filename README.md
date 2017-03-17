@@ -2,6 +2,8 @@
 
 Testing out [cropperjs](https://fengyuanchen.github.io/cropperjs/) in Ember using [emberx-file-input](https://github.com/thefrontside/emberx-file-input) to select local files.
 
+[Work In Progress]
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.

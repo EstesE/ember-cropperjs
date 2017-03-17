@@ -2,6 +2,8 @@
   "name": "ember-cropperjs",
   "dependencies": {
     "cropperjs": "^0.8.1",
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "Ionicons": "ionicons#^2.0.1"
   }
 }

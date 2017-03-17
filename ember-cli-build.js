@@ -5,6 +5,12 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
+    lessOptions: {
+      paths: [
+        'bower_components/bootstrap/less',
+        'bower_components/cropperjs/src/less'
+      ]
+    }
   });
 
   app.import('bower_components/bootstrap/dist/js/bootstrap.js');
@@ -16,11 +22,6 @@ module.exports = function(defaults) {
   app.import('bower_components/font-awesome/fonts/fontawesome-webfont.woff', { destDir: 'fonts' });
   app.import('bower_components/font-awesome/fonts/fontawesome-webfont.woff2', { destDir: 'fonts' });
   app.import('bower_components/font-awesome/fonts/FontAwesome.otf', { destDir: 'fonts' });
-
-  app.import('bower_components/aspen-theme/fonts/entypo.eot', { destDir: 'fonts' });
-  app.import('bower_components/aspen-theme/fonts/entypo.ttf', { destDir: 'fonts' });
-  app.import('bower_components/aspen-theme/fonts/entypo.woff', { destDir: 'fonts' });
-  app.import('bower_components/aspen-theme/fonts/entypo.woff2', { destDir: 'fonts' });
 
   app.import('bower_components/Ionicons/fonts/ionicons.eot', { destDir: 'fonts' });
   app.import('bower_components/Ionicons/fonts/ionicons.ttf', { destDir: 'fonts' });
