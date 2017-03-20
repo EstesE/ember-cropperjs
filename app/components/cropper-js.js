@@ -88,12 +88,18 @@ export default Ember.Component.extend({
             let component = this;
             let reader = new FileReader();
             component.set('isLoading', true);
+
             reader.onload = function (event) {
                 let data = event.target.result;
                 component.set('isLoading', false);
                 component.cropper.replace(data);
             };
-            reader.readAsDataURL(file[0]);
+
+            if (file.length > 0) {
+                reader.readAsDataURL(file[0]);
+            } else {
+                component.set('isLoading', false);
+            }
         },
     }
 
